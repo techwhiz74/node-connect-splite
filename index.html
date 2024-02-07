@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>File Upload Form</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="title">
+    <h1>File Upload Form</h1>
+  </div>
+  
+  <div class="container mt-4">
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="fileInput">Choose an image:</label>
+            <input type="file" class="form-control-file" name="fileInput" id="fileInput" accept=".png">
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" id="comment"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Image</button>
+    </form>
+    <button onclick="showImage()" class="btn btn-success mt-3">Show Image</button>
+</div>
+
+  <div class="show-image">
+    <div id="img" class="showCommentModal grid-container"></div>
+  </div>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
